@@ -41,6 +41,10 @@
 			}
 			else echo("Popraw nowe hasło");
 		}
+		
+	}
+	if($_SERVER['REQUEST_METHOD']==="POST" && isset($_POST['remove_account_button'])) {
+		
 	}
 	
 	
@@ -57,6 +61,13 @@
 				<label>Powtórz nowe hasło:</label><br>
 				<input type="password" name="repeat_new_password" minlength="4" maxlength="30"><br>
 				<button type="submit" name="change_password_button">Wyślij</button>
+		</fieldset>
+	</form>
+	<form method="post" action="#" name="remove_account_form">	
+		<fieldset>
+			<legend>Usuń konto</legend>
+				<button type="submit" name="remove_account_button">Kliknij przycisk, jeśli chcesz usunąć konto</button>
+				<script src="areyousure.js"></script>
 		</fieldset>
 	</form>
 	
