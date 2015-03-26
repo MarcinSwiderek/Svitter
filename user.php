@@ -12,8 +12,8 @@
 	<header><?php include("header.php");?></header> 
 	<main>
 		<h3>Username : <?php 
-			session_start();
-			$sql="SELECT * FROM Users WHERE id={$_SESSION['id']}";
+			
+			$sql="SELECT * FROM Users WHERE id={$_SESSION['user_id']}";
 			$result=$conn->query($sql);
 			
 			if($result->num_rows > 0) {

@@ -13,7 +13,7 @@
 	<?php include("connection.php");?>
 	<header><?php include("header.php");?></header> 
 	<main>
-	<h1>TEST</h1>
+	
 	
 	</main>
 	<footer><?php include("footer.php");?></footer>	
