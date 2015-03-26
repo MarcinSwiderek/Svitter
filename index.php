@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8>
 	<title>Svitter</title>
-	<link rel="stylesheet" href="style.css">
+
 
 </head>
 
@@ -13,7 +13,12 @@
 	<?php include("connection.php");?>
 	<header><?php include("header.php");?></header> 
 	<main>
+	<?php 
+	if(isset($_SESSION['user_id'])) {
+		echo "<h3>Hello user {$_SESSION['user_name']} !!! </h3> ";
+	}
 	
+	?>
 	
 	</main>
 	<footer><?php include("footer.php");?></footer>	

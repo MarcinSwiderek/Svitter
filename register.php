@@ -41,6 +41,7 @@
 						$sql='INSERT INTO Users(name,password) VALUES ("'.$_POST['new_user_name'].'","'.$hashedPass.'")';
 						$result=$conn->query($sql);						
 						$_SESSION['user_id']=$conn->insert_id;
+						$_SESSION['user_name']=$_POST['new_user_name'];
 						header("Location: index.php");
 						
 						

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	poczatek tekstu Headera:
@@ -28,15 +30,17 @@
 			<a href="index.php">Strona główna</a> 
 			<a href="friends">Przyjaciele</a>
 			<a href="messages">Wiadomości</a>
-			<a href="settings">Opcje</a>
-			<a href="register.php">Zarejestruj się</a>
+			<a href="settings.php">Opcje</a>
+			
 			<?php 
 			if (isset($_SESSION['user_id'])) {
+				echo ("<a href='user.php'>Twoje dane</a>");
 				echo ("<form method='post' action='logout.php'>
 						<button type='submit' name='logout_button'>Wyloguj</button>
 						</form>");
 			}
 			else {
+				echo("<a href='register.php'>Zarejestruj się</a>");
 				echo("<a href='login.php'>Zaloguj się</a>");
 			}
 			?>

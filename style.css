@@ -1,3 +1,9 @@
 .main-menu {
 	display: inline;
 }
+body {
+	text-align:center;
+}
+.user-name-top {
+	float:left;
+}

@@ -18,16 +18,16 @@
 			if(isset($_POST['login_name']) && isset($_POST['login_password'])) {
 				$sql='SELECT * FROM Users';
 				$result=$conn->query($sql);
-				$is_valid=false;
+				
 				
 				if($result-> num_rows >0) {
 					while($row=$result->fetch_assoc()){
 						if($row['name']===$_POST['login_name']) {
 							$truepass=password_verify($_POST['login_password'],$row['password']);
 							if($truepass) {
-								$is_valid=true;
 								/*Tutaj obsluga zalogowanego uzytkownika*/
 								$_SESSION['user_id']=$row['id'];
+								$_SESSION['user_name']=$row['name'];
 								header("Location: index.php");
 							}
 						}
