@@ -1,17 +1,9 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8>
-	<title>Svitter</title>
 
 
-</head>
 
-
-<body>
-	<script src="http://code.jquery.com/jquery-1.11.2.js"></script>
-	<?php include("connection.php");?>
+	
+	
 	<header><?php include("header.php");?></header> 
 	<main>
 	
@@ -67,13 +59,13 @@
 		<fieldset>
 			<legend>Usuń konto</legend>
 				<button type="submit" name="remove_account_button">Kliknij przycisk, jeśli chcesz usunąć konto</button>
-				<script src="areyousure.js"></script>
+				<script type="text/javascript"  src="areyousure.js"></script>
 		</fieldset>
 	</form>
 	
 	</main>
-	<footer><?php include("footer.php");?></footer>	
+	<?php include("footer.php");?>
 	
 	
-</body>
-</html>
+
+

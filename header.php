@@ -3,8 +3,10 @@
 <head>
 	
 	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 </head>
 <body>
+	<?php include("connection.php");?>
 	poczatek tekstu Headera:
 	<h2 class="user-name-top"><?php 
 	session_start();
@@ -49,6 +51,3 @@
 
 	Koniec tekstu headera
 
-</body>
-
-</html>

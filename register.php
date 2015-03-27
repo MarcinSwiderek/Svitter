@@ -8,8 +8,8 @@
 </head>
 
 
-<body>
-	<script src="http://code.jquery.com/jquery-1.11.2.js"></script>
+
+	
 	<?php include("connection.php");?>
 	<header> <?php include("header.php");?> </header> 
 	<main>
@@ -65,7 +65,7 @@
 		</form>
 	
 	</main>
-	<footer> <?php include("footer.php"); ?> </footer>	
+	<?php include("footer.php"); ?> 	
 	
 	
 </body>
