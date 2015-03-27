@@ -29,21 +29,23 @@
 	<nav>
 	
 		<ul class="main-menu">
-			<a href="index.php">Strona główna</a> 
-			<a href="friends">Przyjaciele</a>
-			<a href="messages">Wiadomości</a>
-			<a href="settings.php">Opcje</a>
+			<a href="index.php">Strona główna |</a> 
+		
+		
 			
 			<?php 
 			if (isset($_SESSION['user_id'])) {
-				echo ("<a href='user.php'>Twoje dane</a>");
+				echo ("<a href='user.php'>Twoje dane |</a>");
+				echo("<a href='settings.php'>Opcje |</a>");
+				echo("<a href='friends'>Przyjaciele |</a>");
+			    echo ("<a href='messages'>Wiadomości |</a>");
 				echo ("<form method='post' action='logout.php'>
 						<button type='submit' name='logout_button'>Wyloguj</button>
 						</form>");
 			}
 			else {
-				echo("<a href='register.php'>Zarejestruj się</a>");
-				echo("<a href='login.php'>Zaloguj się</a>");
+				echo("<a href='register.php'>Zarejestruj się |</a>");
+				echo("<a href='login.php'>Zaloguj się |</a>");
 			}
 			?>
 		</ul>
