@@ -1,6 +1,6 @@
 
 
-	<?php include("connection.php");?>
+	
 	<header><?php include("header.php");?></header> 
 	<main>
 		<h3>Username : <?php 

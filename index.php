@@ -37,13 +37,13 @@
 					</p>
 					");
 					echo ("<p class='post-title'>
-							Tytuł posta: {$row['post_name']}
+							Tytuł posta: <a href='post.php?page_id={$row['post_id']}'>{$row['post_name']}</a>
 						</p>		
 					");
 					echo ("<p class='post-content'>
 							Treść posta: <br>
 							{$row['post_input']}	
-												
+							</p>					
 					");
 				}
 			

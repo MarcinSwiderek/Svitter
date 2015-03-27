@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Svitter</title>
-	<link rel="stylesheet" href="style.css">
-	<?php require 'vendor/autoload.php';?>
-</head>
+
+
 
 
 
@@ -68,5 +62,4 @@
 	<?php include("footer.php"); ?> 	
 	
 	
-</body>
-</html>
+
