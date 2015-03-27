@@ -3,7 +3,7 @@ include("header.php");
 ?>
 <main>
 	<?php 
-		
+		//obsluga formularza
 		if($_SERVER['REQUEST_METHOD']==="POST") {
 			if(isset($_POST['comment_input']) && strlen($_POST['comment_input']) > 0 ) {
 				$commentdate=date('Y-m-d H:i:s');
@@ -13,7 +13,7 @@ include("header.php");
 				
 			}
 		}
-		
+		//post oraz formularz do komentarza
 		$post=$_GET['page_id'];
 		$sql='SELECT * FROM Users JOIN Posts on Users.id=Posts.user_id WHERE Posts.post_id="'.$_GET['page_id'].'"';
 		$result=$conn->query($sql);
@@ -43,14 +43,36 @@ include("header.php");
 							
 						");
 					//tutaj wyświetlanie komentarzy do posta
-					echo ("<h2>Najnowsze komentarze: </h2>");
+					
 			}
 		} 
+		
 		else {
 			"Nie ma takiego postu.";
 		}
-		
-	
+		//lista komentarzy
+		echo ("<div class='comments-container'>");
+		echo ("<h2>Najnowsze komentarze: </h2>");
+		$sql='SELECT * FROM Comments JOIN Posts on Comments.post_id=Posts.post_id JOIN Users on Comments.user_id=Users.id WHERE Comments.post_id="'.$post.'" ORDER BY Comments.comment_date DESC';
+		$result=$conn->query($sql);
+		if($result->num_rows > 0 ) {
+			while ($row=$result->fetch_assoc()) {
+				echo("<p class='comment-author'>
+					Autor komentarza: {$row['name']} , data dodania komentarza: {$row['comment_date']}	
+					</p>
+				");
+				echo("<p class='comment-content'>
+					{$row['comment_text']}
+					</p>	
+						
+				");
+			}
+		}
+		else {
+			echo ("Brak komentarzy");
+		}
+			
+		echo("</div>");
 	
 	
 	?>
