@@ -5,7 +5,7 @@
 	<main>
 	<?php 
 	if(isset($_SESSION['user_id'])) {
-		echo "<h3>Hello user {$_SESSION['user_name']} !!! </h3> ";
+		echo "<h3>Hello  {$_SESSION['user_name']} !!! </h3> ";
 	
 	
 	echo("<div id='new_post_div'>
@@ -33,7 +33,7 @@
 			if($result->num_rows > 0) {
 				while($row=$result->fetch_assoc()) {
 					echo ("<p class='post-author'>
-							Dodany przez: {$row['name']}, Data:{$row['post_date']}
+							Dodany przez: <a href='profile.php?profile_id={$row['id']}'>{$row['name']}</a>, Data:{$row['post_date']}
 					</p>
 					");
 					echo ("<p class='post-title'>
