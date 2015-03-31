@@ -33,7 +33,7 @@
 			if (isset($_SESSION['user_id'])) {
 				echo ("<li><a href='user.php'>Twoje dane </a></li>");
 				echo("<li><a href='settings.php'>Opcje </a></li>");
-				echo("<li><a href='friends'>Przyjaciele </a></li>");
+				echo("<li><a href='index.php'>Przyjaciele </a></li>");
 			    echo ("<li><a href='messages.php'>Wiadomości </a></li>");
 				echo ("<form method='post' action='logout.php'>
 						<button type='submit' name='logout_button'>Wyloguj</button>

@@ -17,9 +17,11 @@ include("header.php");
 	if($result->num_rows > 0 ){
 		while($row=$result->fetch_assoc()) {
 			echo("<li class='inbox-message-title'>");
+			echo('<a href="showmessage.php?message_id='.$row['message_id'].'">Pokaż</a>');
 			echo('<a href="profile.php?profile_id='.$row['sender_id'].'">'.$row['name'].'</a>');
 			echo("    ".$row['message_date']."<br>");
 			echo("<p class='message-content'>");
+			//początek zapytania wyświetlającego tylko 30 pierwszych znaków wiaadomości , do uzupełnienia:$sqltext='SELECT LEFT(message_text, 30) AS excerpt FROM Messages WHERE ';
 			echo($row['message_text']);
 			echo("</li><br>");
 		}
@@ -44,6 +46,7 @@ include("header.php");
 	if($result->num_rows > 0 ){
 		while($row=$result->fetch_assoc()) {
 			echo("<li class='outbox-message-title'>");
+			echo('<a href="showmessage.php?message_id='.$row['message_id'].'">Pokaż</a>');
 			echo('<a href="profile.php?profile_id='.$row['receiver_id'].'">'.$row['name'].'</a>');
 			echo("    ".$row['message_date']."<br>");
 			echo("<p class='message-content'>");

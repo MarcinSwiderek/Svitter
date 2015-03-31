@@ -20,7 +20,6 @@ ul li{
 	text-transform:capitalize;
 
 
-
 }
 
 ul li a{
@@ -30,6 +29,13 @@ ul li a{
 	padding-top:15px;
 	padding-right:30px;
 	padding-bottom:15px;	
+
+}
+.message-content{
+	width:500px;
+	text-align:left;
+	padding: 0px 4px 0px 4px;
+		
 
 }
 
