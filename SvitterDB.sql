@@ -33,7 +33,7 @@ CREATE TABLE `Comments` (
   KEY `post_id` (`post_id`),
   CONSTRAINT `Comments_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`),
   CONSTRAINT `Comments_ibfk_2` FOREIGN KEY (`post_id`) REFERENCES `Posts` (`post_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `Comments` (
 
 LOCK TABLES `Comments` WRITE;
 /*!40000 ALTER TABLE `Comments` DISABLE KEYS */;
-INSERT INTO `Comments` VALUES (1,18,6,'Tresc komentarza','2015-02-02 14:23:33'),(3,21,6,'aaaaaaaaa','2015-03-27 14:50:22'),(4,20,5,'jakis taki krotki ten komentarz jeb jeb jeb','2015-03-27 14:51:16'),(5,20,5,'aaaaaaa','2015-03-27 15:12:25'),(6,20,5,'dsadas','2015-03-27 15:12:27'),(7,20,5,'aaaaaaaaasdadsas','2015-03-27 15:19:03'),(8,20,6,'jhklhhkh','2015-03-27 15:28:05'),(9,20,6,'fdas','2015-03-27 15:30:31');
+INSERT INTO `Comments` VALUES (1,18,6,'Tresc komentarza','2015-02-02 14:23:33'),(3,21,6,'aaaaaaaaa','2015-03-27 14:50:22'),(4,20,5,'jakis taki krotki ten komentarz jeb jeb jeb','2015-03-27 14:51:16'),(5,20,5,'aaaaaaa','2015-03-27 15:12:25'),(6,20,5,'dsadas','2015-03-27 15:12:27'),(7,20,5,'aaaaaaaaasdadsas','2015-03-27 15:19:03'),(8,20,6,'jhklhhkh','2015-03-27 15:28:05'),(9,20,6,'fdas','2015-03-27 15:30:31'),(10,20,9,'dasdfsaf','2015-03-31 19:20:38');
 /*!40000 ALTER TABLE `Comments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -65,7 +65,7 @@ CREATE TABLE `Messages` (
   KEY `receiver_id` (`receiver_id`),
   CONSTRAINT `Messages_ibfk_1` FOREIGN KEY (`sender_id`) REFERENCES `Users` (`id`),
   CONSTRAINT `Messages_ibfk_2` FOREIGN KEY (`receiver_id`) REFERENCES `Users` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,6 +74,7 @@ CREATE TABLE `Messages` (
 
 LOCK TABLES `Messages` WRITE;
 /*!40000 ALTER TABLE `Messages` DISABLE KEYS */;
+INSERT INTO `Messages` VALUES (1,20,18,'Tekst wiadomo?ci','2015-02-13 13:24:24',NULL),(2,20,18,'dsadasffas','2015-03-31 16:53:02',NULL),(3,20,18,'hej andrzej !','2015-03-31 16:54:30',NULL),(4,20,18,'kolejna wiadomosc do andrzeja','2015-03-31 16:56:12',NULL),(5,18,18,'sasa','2015-03-31 17:53:27',NULL),(6,20,18,'CzeÅ›Ä‡ Andrzej ? co u ciebie ? ja tutaj sobie kodzÄ™, fajnie co ? hehe','2015-03-31 17:59:53',NULL),(7,18,20,'Wiadomosc do marcina\r\n','2015-03-31 19:09:34',NULL);
 /*!40000 ALTER TABLE `Messages` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -93,7 +94,7 @@ CREATE TABLE `Posts` (
   PRIMARY KEY (`post_id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `Posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,7 +103,7 @@ CREATE TABLE `Posts` (
 
 LOCK TABLES `Posts` WRITE;
 /*!40000 ALTER TABLE `Posts` DISABLE KEYS */;
-INSERT INTO `Posts` VALUES (4,18,'post andrzeja','trescdasd','2015-03-27 12:09:18'),(5,18,'post andrzeja','trescdasdczx','2015-03-27 12:10:18'),(6,18,'Nosz ja pier','Andrzej malkontent pisze opis..','2015-03-27 12:14:08'),(7,19,'Tytul posta mietka','tresc posta mietka\r\n','2015-03-27 12:30:45'),(8,18,'swiezy post ','aaaaa','2015-03-27 12:54:04'),(9,18,'nowy post','tresc nowego postu','2015-03-27 12:55:38');
+INSERT INTO `Posts` VALUES (4,18,'post andrzeja','trescdasd','2015-03-27 12:09:18'),(5,18,'post andrzeja','trescdasdczx','2015-03-27 12:10:18'),(6,18,'Nosz ja pier','Andrzej malkontent pisze opis..','2015-03-27 12:14:08'),(7,19,'Tytul posta mietka','tresc posta mietka\r\n','2015-03-27 12:30:45'),(8,18,'swiezy post ','aaaaa','2015-03-27 12:54:04'),(9,18,'nowy post','tresc nowego postu','2015-03-27 12:55:38'),(10,20,'','','2015-03-31 19:21:44');
 /*!40000 ALTER TABLE `Posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -141,4 +142,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-03-27 16:38:28
+-- Dump completed on 2015-03-31 21:46:15

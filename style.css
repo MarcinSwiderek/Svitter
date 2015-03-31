@@ -2,6 +2,8 @@
 body {
 	text-align:center;
 	font-family: "Futura PT","Verdana","Arial", sans-serif;
+	
+	
 }
 .user-name-top {
 	float:left;
@@ -18,7 +20,7 @@ ul li{
 	opacity:0.7;
 	text-align:center;
 	text-transform:capitalize;
-
+	
 
 }
 
@@ -55,15 +57,15 @@ ul li a:hover {
 
 }
 div{
-	border:1px solid blue;
+	border:1px solid grey;
 	padding: 10px 10px;
+	background:#36b4a7;
+	margin-left:100px;
+	margin-right:100px;
 }
-p{
-	border-bottom: 1px solid grey;
 
-}
 .post-title{
-	background:#CCFFCC;
+	background:none;
 	margin-left:20%;
 	margin-right:20%;
 }
@@ -89,4 +91,30 @@ footer {
 	text-align:center;
 	width:100%;
 	background:#36b4a7;
+	color:white;
 }
+form input {
+	background:#EBEEF0;
+	border-radius:5px;
+
+}
+form textarea {
+	background:#EBEEF0;
+	border-radius:5px;
+}
+form input:hover {
+	background:white;
+}
+form textarea:hover {
+	background:white;
+}
+button {
+	background:white;
+	border-radius:10px;
+
+}
+button:hover {
+	background:#E8DCD5;
+    border-radius:5px;
+}
+
