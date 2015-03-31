@@ -5,7 +5,7 @@
 	<main>
 	<?php 
 	if(isset($_SESSION['user_id'])) {
-		echo "<h3>Hello  {$_SESSION['user_name']} !!! </h3> ";
+		echo "<h3>Cześć  {$_SESSION['user_name']} !!! </h3> ";
 	
 	
 	echo("<div id='new_post_div'>
@@ -41,7 +41,7 @@
 						</p>		
 					");
 					echo ("<p class='post-content'>
-							Treść posta: <br>
+							
 							{$row['post_input']}	
 							</p>					
 					");

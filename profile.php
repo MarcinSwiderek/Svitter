@@ -10,6 +10,7 @@ include ("header.php");
 	if($result->num_rows > 0) {
 		while ($row=$result->fetch_assoc()) {
 			echo ($row['name']);
+			$current_user_name=$row['name'];
 		}
 	}
 	else {
@@ -17,7 +18,7 @@ include ("header.php");
 	}
 	?>
 	</h2>
-	<form method="post" action="writemessage.php" name="send_message_form">
+	<form method="post" action='writemessage.php<?php echo("?send_to=$current_user_name");?>' name="send_message_form">
 		<button type="submit">Wyślij wiadomość do użytkownika</button>	
 	</form>
 	

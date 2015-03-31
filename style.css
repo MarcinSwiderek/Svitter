@@ -1,9 +1,86 @@
-.main-menu {
-	display: inline;
-}
+
 body {
 	text-align:center;
+	font-family: "Futura PT","Verdana","Arial", sans-serif;
 }
 .user-name-top {
 	float:left;
+	font-weight:bold;
+	font-style:italic;
+}
+ul{
+	display: inline-block;
+	list-style-type:none;
+}
+ul li{
+	display: inline-block;
+	background:#36b4a7;
+	opacity:0.7;
+	text-align:center;
+	text-transform:capitalize;
+
+
+
+}
+
+ul li a{
+	display:inline-block;
+	color:white;
+	padding-left: 30px;
+	padding-top:15px;
+	padding-right:30px;
+	padding-bottom:15px;	
+
+}
+
+a {
+	text-decoration: none;
+	color: #005CE6;
+}
+a:hover {
+	color:#00FFFF;
+}
+ul li:hover {
+	opacity:0.9;
+}
+ul li a:hover {
+	background:#00FFFF;
+	color:white;
+
+}
+div{
+	border:1px solid blue;
+	padding: 10px 10px;
+}
+p{
+	border-bottom: 1px solid grey;
+
+}
+.post-title{
+	background:#CCFFCC;
+	margin-left:20%;
+	margin-right:20%;
+}
+.post-content {
+	background: #CCCCFF;
+	padding-top:20px;
+	margin-left:20%;
+	margin-right:20%;
+	padding-bottom:20px;
+	border-radius:10px;
+	text-align:left;
+	padding-left:5px;
+	padding-right:5px;
+}
+h2 {
+	background: #99FF66;
+	margin-left:40%;
+	margin-right:40%;
+}
+footer {
+	
+	bottom:0;
+	text-align:center;
+	width:100%;
+	background:#36b4a7;
 }
